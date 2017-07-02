@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.joce.mybluetooth_app.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ON / OFF"
+        android:id="@+id/btnONOFF"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discoverable"
+        android:id="@+id/btnScan"
+        android:onClick="btnDiscoverable"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnONOFF"
+        android:layout_toEndOf="@+id/btnONOFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover"
+        android:id="@+id/btnDiscover"
+        android:onClick="btnDiscover"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnScan"
+        android:layout_toEndOf="@+id/btnScan" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/lvNewDevice"
+        android:layout_below="@+id/btnDiscover">
+
+    </ListView>
+
+</RelativeLayout>
